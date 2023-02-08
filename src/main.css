@@ -30,7 +30,7 @@ body{
 }
 
 .game-holder{
-    background-image: url(/bgg.JPG);
+    background-image: url(/src/img/bgg.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
