@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    background-color: #f3f3f3;
+}
+
+.game-house{
+    height: auto;
+    width: 20em;
+    z-index: 30;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:50px;
+    transition: 1s;
+    border-radius: 0px 25px 0px 25px;
+}
+
+.game-holder{
+    background-image: url(/bgg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    max-height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.game_overlay{
+    background-color: rgba(5, 0, 49, 0.58);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 3em 0px;
+    width: 380px;
+
+}
+
+.active{
+    display: flex;
+}
+
+.inactive{
+        display: none;
+        transition: 1s;
+}
+
+p{
+    font-weight: bold;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: rgb(181, 118, 36);
+    background-color: white;
+    padding:.4em;
+    font-weight: 900;
+    transition: .2s;
+    height:70px;
+    width: 250px;
+   
+}
+
+
+.game-option{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.game-status{
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+
+.cards, .sum{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-size  : 20px;
+}
+
+button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.485);
+
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: black;
+    border-radius: 50px;
+}
+
+.price{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-size  : 30px;
+    font-weight: 800;
+}
+
+.bet{
+    width: 80px;
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Neww card concept */
+
+.card_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: #ffff;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid red;
+    transition: 1s;
+    translate: rotate(0deg);
+}
+
+.icon_side{
+    width: 70px;
+    height: 300px;
+    padding: 20px 0px;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
+
+.icon_center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    font-size: 60px;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: red;
+}
+
+.main{
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 30px;
+}
+
+.icon_side:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+span{
+    width: 20px;
+    height: 10px;
+    background-color: red;
+    position: relative;
+    top: -55px;
+    left: -40px;
+}
+span:nth-child(1){
+    background-color: yellow;
+    position: relative;
+    top: 55px;
+    left: 310px;
+    animation: winMove 1s linear infinite;
+}
+
+.animated_element{
+    color: white;
+    animation: winMove 1s linear;
+}
+
+@keyframes winMove {
+    0%{
+        transform: translate(0 0);
+    }
+    50%{
+        transform:translate(10px 50px);
+    }
+    100%{
+        transform: translate(30px 100px);
+    }
+}
+
+.odds{
+    position: relative;
+    top: -20px;
+    background-color:rgb(181, 118, 36);
+    padding: 3px 10px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 20;
+    font-size: 12px;
+}
+
+.game_over{
+    background-image: url(/bgg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 80vh; 
+  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 1s;
+    display: none;
+}
+.game_overlay2{
+    background-color: rgba(0, 0, 0, 0.666);
+    width: 300px;
+    height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
